@@ -36,7 +36,7 @@ Gem::Specification.new do |s|
     "cookbooks/cucumber-chef/files/default/cucumber-run_list",
     "cookbooks/cucumber-chef/files/default/git-private-key",
     "cookbooks/cucumber-chef/files/default/install-chef",
-    "cookbooks/cucumber-chef/files/default/lxc-lucid-chef",
+    "cookbooks/cucumber-chef/files/default/lxc-controller-network-config",
     "cookbooks/cucumber-chef/files/default/permissive-ssh-config",
     "cookbooks/cucumber-chef/metadata.rb",
     "cookbooks/cucumber-chef/recipes/controller.rb",
