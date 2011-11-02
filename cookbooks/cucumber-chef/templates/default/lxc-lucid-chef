@@ -152,8 +152,9 @@ EOF
     cp /etc/resolv.conf $image/etc/resolv.conf
     cp /etc/lxc/install-chef.sh $image/tmp/install-chef.sh
     chroot $image /bin/sh -c "/usr/bin/apt-get update && /usr/bin/apt-get --assume-yes --allow-unauthenticated install strace ruby1.9.1p180"
-    chroot $image /bin/sh -c "/usr/local/bin/gem install rubygems-update --version=1.8.10"
-    chroot $image /bin/sh -c "/usr/local/bin/update_rubygems"
+    chroot $image /bin/sh -c "/usr/local/bin/gem update --system"
+    # chroot $image /bin/sh -c "/usr/local/bin/gem install rubygems-update --version=1.8.10"
+    # chroot $image /bin/sh -c "/usr/local/bin/update_rubygems"
     mkdir -p $image/$HOME
     chroot $image /bin/sh -c "/usr/local/bin/gem install chef --no-ri --no-rdoc 2>&1" 2>&1 >> /tmp/data
     return $?
